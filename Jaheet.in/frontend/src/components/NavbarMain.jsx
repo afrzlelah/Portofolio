@@ -1,16 +1,22 @@
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 
+const HamburgerButton = ({ rotate }) => {
+  return <></>;
+};
+
 const NavbarMain = () => {
   const navigate = useNavigate();
   const [btn, setBtn] = useState(false);
+  const [rotate, setRotate] = useState("rotate-0");
 
   useState(() => {
     const handleBtn = () => {
       setBtn(false);
     };
-    window.addEventListener("scroll", handleBtn);
-    return () => window.addEventListener("scroll", handleBtn);
+    const eventScroll = window.addEventListener("scroll", handleBtn);
+
+    return () => (eventScroll, eventScroll2);
   }, []);
 
   const serviceSpace = () => {
@@ -105,9 +111,14 @@ const NavbarMain = () => {
             </ul>
             {/* Tombol Menu mass */}
             <div
-              className="btnMenu md:hidden ml-30"
+              className={`btnMenu ${rotate} md:hidden ml-30`}
               onClick={(e) => {
                 setBtn(!btn);
+                if (btn == true) {
+                  setRotate("rotate-0");
+                } else {
+                  setRotate("rotate-90");
+                }
               }}
             >
               <svg
