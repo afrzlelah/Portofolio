@@ -1,6 +1,6 @@
 const CardService = ({ title, description, features, setPage }) => (
   <div className="bg-white rounded-xl shadow-lg hover:shadow-xl hover:scale-y-110 transition duration-300 p-6 border-t-4 border-indigo-500">
-    <h3 className="text-2xl font-bold text-indigo-600 mb-3">{title}</h3>
+    <h3 className="text-2xl font-bold text-black mb-3">{title}</h3>
     <p className="text-gray-600 mb-4">{description}</p>
     <ul className="space-y-2 text-sm text-gray-700 mb-6">
       {features.map((feature, index) => (

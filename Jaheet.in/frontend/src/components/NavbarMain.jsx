@@ -30,7 +30,7 @@ const NavbarMain = () => {
   };
 
   const homeSpace = () => {
-    const element = document.getElementById("content1Space");
+    const element = document.getElementById("contentSpace");
     element.scrollIntoView({
       behavior: "smooth",
       block: "center",
@@ -52,12 +52,25 @@ const NavbarMain = () => {
     });
   };
 
+  const why = () => {
+    const element = document.getElementById("why");
+    element.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
   return (
     <>
       <header>
-        <div className="bg-white fixed  flex justify-between items-center h-15 w-screen shadow-2xl/35 shadow-black">
+        <div className="bg-white fixed  flex justify-between px-0 md:px-10 items-center h-15 w-screen shadow-2xl/35 shadow-black">
           <div className="logo text-indigo-600 p-5 font-bold text-2xl">
-            <h1>Jahit.in</h1>
+            <h1>
+              <span className="bg-indigo-500 p-2 rounded-xl text-white">
+                Jaheet
+              </span>
+              .in
+            </h1>
           </div>
           <div className=" group">
             <ul
@@ -83,20 +96,23 @@ const NavbarMain = () => {
               >
                 Products
               </li>
-              <li onClick={() => contactSpace()} className={"cursor-pointer"}>
+              <li
+                onClick={() => contactSpace()}
+                className={"cursor-pointer hover:underline"}
+              >
                 Contact
               </li>
             </ul>
             {/* Tombol Menu mass */}
             <div
-              className="btnMenu md:hidden ml-40"
+              className="btnMenu md:hidden ml-30"
               onClick={(e) => {
                 setBtn(!btn);
               }}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
+                className="h-10 w-10"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -113,7 +129,7 @@ const NavbarMain = () => {
           <div className="login text-white">
             <button
               onClick={() => navigate("/login")}
-              className={"bg-indigo-600 px-3 py-2  pr-7 rounded-bl-2xl"}
+              className={"bg-indigo-600 px-3 py-2  mr-7 rounded-2xl"}
             >
               Login
             </button>

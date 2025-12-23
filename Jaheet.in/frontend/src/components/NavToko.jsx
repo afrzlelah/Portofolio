@@ -66,14 +66,14 @@ const NavToko = ({ onSearch }) => {
           {/* Logo/Nama Brand */}
           <button
             onClick={() => {
-              navigate("/toko");
+              navigate("/");
             }}
             className="text-2xl font-black text-white cursor-pointer select-none"
           >
             <span className="bg-white text-indigo-600 px-2 rounded-lg mr-1">
-              Toko
+              Jaheet
             </span>
-            Biru
+            .in
           </button>
 
           {/* Search Bar (Tengah) */}

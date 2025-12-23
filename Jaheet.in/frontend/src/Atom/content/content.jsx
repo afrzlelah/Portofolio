@@ -2,8 +2,17 @@ import { useNavigate } from "react-router-dom";
 import CardService from "./Cards";
 
 const Content = () => {
+  const navigate = useNavigate();
   const serviceSpace = () => {
-    const element = document.getElementById("contentSpace");
+    const element = document.getElementById("serviceSpace");
+    element.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
+  const why = () => {
+    const element = document.getElementById("why");
     element.scrollIntoView({
       behavior: "smooth",
       block: "start",
@@ -25,12 +34,18 @@ const Content = () => {
               kemeja, seragam hingga jas, kami siap melayani
             </p>
           </div>
-          <div className="btn mt-10 flex justify-center">
+          <div className="btn mt-10 flex justify-center gap-3">
             <button
-              onClick={() => serviceSpace()}
-              className=" p-5 bg-indigo-500 text-white rounded-full font-medium cursor-pointer animate-bounce"
+              onClick={() => navigate("/toko")}
+              className=" p-5 bg-indigo-500 text-white rounded-full font-medium cursor-pointer hover:bg-indigo-800 transition "
             >
-              Jelajahi Layanan Kami
+              Masuk ke Toko Kami
+            </button>
+            <button
+              onClick={() => why()}
+              className="px-4 bg-indigo-300 rounded-full text-sm  font-medium cursor-pointer hover:bg-indigo-800 hover:text-white"
+            >
+              Mengenal Kami
             </button>
           </div>
         </div>
@@ -46,16 +61,16 @@ const Content2 = () => {
         id="tentang"
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 mb-5"
       >
-        <div className="grid md:grid-cols-2 gap-10 items-center bg-white p-8 rounded-xl shadow-lg border-t-5 border-indigo-700">
+        <div className="grid md:grid-cols-2 gap-10 items-center mx-0 md:mx-5  bg-white p-8 rounded-xl shadow-lg border-t-5 border-indigo-700">
           <div>
             <h2 className="text-3xl font-bold  mb-10 text-indigo-700">
               Tentang Kami
             </h2>
             <p className="text-lg leading-relaxed mb-4">
               Kami percaya bahwa setiap orang berhak mengenakan pakaian yang
-              dibuat khusus untuk mereka. Didirikan pada tahun 2015, "Jahit
-              Eksklusif" telah mendedikasikan diri untuk seni jahit kustom,
-              menggabungkan teknik tradisional dengan tren mode terkini.
+              dibuat khusus untuk mereka. Didirikan pada tahun 2015, "Jaheet.in"
+              telah mendedikasikan diri untuk seni jahit kustom, menggabungkan
+              teknik tradisional dengan tren mode terkini.
             </p>
             <p className="text-lg leading-relaxed">
               Fokus kami adalah pada detail, mulai dari pemilihan bahan
@@ -128,7 +143,7 @@ const Why = () => {
   ];
   return (
     <>
-      <section className="py-20 bg-slate-50">
+      <section id="why" className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">
@@ -199,7 +214,7 @@ const Layanan = () => {
     >
       <h1
         id="serviceSpaceMobile"
-        className="text-4xl font-bold text-center text-indigo-700 mb-10"
+        className="text-4xl font-bold text-center text-black mb-10"
       >
         Layanan Kami
       </h1>
@@ -216,9 +231,7 @@ const Maps = () => {
   return (
     <>
       <div className="kat flex justify-center mt-20 ">
-        <h1 className="font-bold text-indigo-700 text-4xl">
-          Kunjungi Kami disini
-        </h1>
+        <h1 className="font-bold text-black text-4xl">Kunjungi Kami disini</h1>
       </div>
       <div className="maps mt-10 bg-slate-100 m-20 rounded-2xl h-96">
         <iframe
@@ -258,9 +271,9 @@ const Portofolio = () => {
     <>
       <section
         id="productSpace"
-        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-20"
+        className="max-w-7xl px-4 sm:px-6 lg:px-8 mt-20 mx-0 md:mx-10"
       >
-        <h2 className="text-3xl font-bold text-center mb-10 text-indigo-700">
+        <h2 className="text-3xl font-bold text-center mb-10 text-black">
           Produk Unggulan Kami
         </h2>
 
@@ -279,7 +292,7 @@ const Portofolio = () => {
         </div>
         <div className="mt-10 flex justify-end">
           <button
-            onClick={() => navigate("/products")}
+            onClick={() => navigate("/toko/products")}
             className="px-5 py-2 rounded-xl bg-indigo-600 text-white
             hover:bg-indigo-500 animate-bounce hover:animate-none"
           >
