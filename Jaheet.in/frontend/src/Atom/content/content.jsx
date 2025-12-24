@@ -21,8 +21,8 @@ const Content = () => {
 
   return (
     <>
-      <div id="contentSpace" className="tanah pt-20 h-auto">
-        <div className="rumah1  bg-indigo-500/30 py-10 sm:mx-10 min-h-1/2 m-3 rounded-xl flex flex-col  ">
+      <div id="contentSpace" className="tanah pt-36 h-auto">
+        <div className="rumah1 py-10 sm:mx-10 min-h-1/2 m-3 rounded-xl flex flex-col  ">
           <div className="perabot h-auto min-h-1/2 m-3 rounded-xl flex justify-center text-4xl md:text-5xl font-bold text-slate-900 px-15 py-0 sm:py-5 mt-0 ">
             <h1 className={"text-center"}>
               Jahit.in: Kualitas Jahit Premium Tanpa Ribet
@@ -37,13 +37,13 @@ const Content = () => {
           <div className="btn mt-10 flex justify-center gap-3">
             <button
               onClick={() => navigate("/toko")}
-              className=" p-5 bg-indigo-500 text-white rounded-full font-medium cursor-pointer hover:bg-indigo-800 transition "
+              className=" p-5 bg-primary text-white rounded-full font-medium cursor-pointer hover:bg-indigo-200 hover:text-slate-900 transition "
             >
               Masuk ke Toko Kami
             </button>
             <button
               onClick={() => why()}
-              className="px-4 bg-indigo-300 rounded-full text-sm  font-medium cursor-pointer hover:bg-indigo-800 hover:text-white"
+              className="px-4 bg-indigo-100 rounded-full text-sm  font-medium cursor-pointer hover:bg-primary hover:text-white"
             >
               Mengenal Kami
             </button>
@@ -61,9 +61,9 @@ const Content2 = () => {
         id="tentang"
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 mb-5"
       >
-        <div className="grid md:grid-cols-2 gap-10 items-center mx-0 md:mx-5  bg-white p-8 rounded-xl shadow-lg border-t-5 border-indigo-700">
+        <div className="grid md:grid-cols-2 gap-10 items-center mx-0 md:mx-5  bg-secondary p-8 rounded-xl shadow-lg">
           <div>
-            <h2 className="text-3xl font-bold  mb-10 text-indigo-700">
+            <h2 className="text-3xl font-bold  mb-10 text-slate-900">
               Tentang Kami
             </h2>
             <p className="text-lg leading-relaxed mb-4">
@@ -91,8 +91,8 @@ const Content2 = () => {
 };
 
 const FeatureCard = ({ icon: Icon, title, description }) => (
-  <div className="p-6 bg-white hover:bg-indigo-600 hover:text-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-slate-100 flex flex-col items-center text-center">
-    <div className="w-12 h-12 bg-indigo-600  rounded-full flex  items-center justify-center mb-4 text-indigo-600 ">
+  <div className="p-6 bg-white hover:bg-primary hover:text-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-slate-100 flex flex-col items-center text-center">
+    <div className="w-12 h-12 bg-primary  rounded-full flex  items-center justify-center mb-4 text-indigo-600 ">
       <Icon color="white" className="w-6 h-6" />
     </div>
     <h3 className="text-lg font-bold  mb-2">{title}</h3>
@@ -143,13 +143,13 @@ const Why = () => {
   ];
   return (
     <>
-      <section id="why" className="py-20 bg-slate-50">
+      <section id="why" className="py-20 bg-sec">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">
               Mengapa Memilih Kami?
             </h2>
-            <div className="w-20 h-1 bg-indigo-600 mx-auto rounded-full"></div>
+            <div className="w-20 h-1 bg-primary mx-auto rounded-full"></div>
             <p className="mt-4 text-slate-600 max-w-2xl mx-auto">
               Kami berkomitmen memberikan pengalaman terbaik melalui dedikasi
               dan integritas di setiap layanan.
@@ -210,14 +210,15 @@ const Layanan = () => {
   return (
     <div
       id="serviceSpace"
-      className="container bg-indigo-500/30 rounded-2xl mx-auto px-4 py-8 mt-10"
+      className="container bg-secondary rounded-2xl mx-auto max-w-7xl px-4 py-8 mt-15"
     >
       <h1
         id="serviceSpaceMobile"
-        className="text-4xl font-bold text-center text-black mb-10"
+        className="text-4xl font-extrabold text-center text-slate-900 "
       >
         Layanan Kami
       </h1>
+      <p className="text-black justify-center align-center flex mb-10 bg-black max-w-15 h-1 mx-auto mt-2 "></p>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
         {services.map((service, index) => (
           <CardService key={index} {...service} />
@@ -231,9 +232,11 @@ const Maps = () => {
   return (
     <>
       <div className="kat flex justify-center mt-20 ">
-        <h1 className="font-bold text-black text-4xl">Kunjungi Kami disini</h1>
+        <h1 className="font-bold text-slate-900 text-4xl">
+          Kunjungi Kami disini
+        </h1>
       </div>
-      <div className="maps mt-10 bg-slate-100 m-20 rounded-2xl h-96">
+      <div className="maps mt-10 bg-sec m-20 rounded-2xl h-96">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.2666927376963!2d110.39593499444273!3d-7.095054999811334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e70890035618ac9%3A0x19d49caa2c350afb!2sJaheet.in!5e0!3m2!1sid!2sid!4v1764388576570!5m2!1sid!2sid"
           className="border:0 h-full w-full p-1"
@@ -253,7 +256,7 @@ const Portofolio = () => {
     <div
       key={index}
       className="rounded-lg overflow-hidden shadow-lg cursor-pointer 
-      shadow-gray-500 hover:scale-110 hover transition duration-300 hover:shadow-xl hover:shadow-gray-500 "
+       hover:scale-110 hover transition duration-300 hover:shadow-lg hover:shadow-gray-500  "
     >
       <img
         src={image}
@@ -261,7 +264,9 @@ const Portofolio = () => {
         className="w-full h-48 md:h-64 object-cover"
       />
       <div className="p-3 bg-white">
-        <h1 className="text-sm font-bold">Product {index}</h1>
+        <h1 className="text-sm font-bold bg-secondary rounded-xl w-20 p-2">
+          Product {index}
+        </h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum</p>
       </div>
     </div>
@@ -269,35 +274,34 @@ const Portofolio = () => {
 
   return (
     <>
-      <section
-        id="productSpace"
-        className="max-w-7xl px-4 sm:px-6 lg:px-8 mt-20 mx-0 md:mx-10"
-      >
-        <h2 className="text-3xl font-bold text-center mb-10 text-black">
-          Produk Unggulan Kami
-        </h2>
-
-        {/* <!-- Galeri Portofolio --> */}
-        <div className="portfolio-grid grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {/* <!-- Item 1 --> */}
-          {[...Array(q)].map((_, index) => {
-            return (
-              <TA
-                key={index}
-                index={index}
-                image="https://placehold.co/400x600/60a5fa/ffffff?text=Produk"
-              />
-            );
-          })}
-        </div>
-        <div className="mt-10 flex justify-end">
-          <button
-            onClick={() => navigate("/toko/products")}
-            className="px-5 py-2 rounded-xl bg-indigo-600 text-white
-            hover:bg-indigo-500 animate-bounce hover:animate-none"
+      <section className="max-w-screen bg-sec ">
+        <div className="max-w-7xl px-4 sm:px-6 lg:px-8 mt-20 mx-auto">
+          <h2
+            id="productSpace"
+            className="text-4xl font-extrabold text-center mb-9 text-slate-900 pt-10"
           >
-            Jelajahi Produk
-          </button>
+            Produk Unggulan Kami
+          </h2>
+          <p className="bg-primary text-slate-100 max-w-15 max-h-1 mx-auto mb-10 -mt-5 flex justify-center">
+            __
+          </p>
+
+          {/* <!-- Galeri Portofolio --> */}
+          <div className="portfolio-grid grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {/* <!-- Item 1 --> */}
+            {[...Array(q)].map((_, index) => {
+              return <TA key={index} index={index} image="/vite.svg" />;
+            })}
+          </div>
+          <div className="mt-10 flex justify-end">
+            <button
+              onClick={() => navigate("/toko/products")}
+              className="px-5 py-2 rounded-xl bg-indigo-600 text-white
+            hover:bg-primary animate-bounce hover:animate-none"
+            >
+              Jelajahi Produk
+            </button>
+          </div>
         </div>
       </section>
     </>
