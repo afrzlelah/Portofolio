@@ -66,9 +66,9 @@ const NavbarMain = () => {
     <>
       <header>
         <div className="bg-white fixed  flex justify-between px-0 md:px-10 items-center h-15 w-screen shadow-lg/20 shadow-black">
-          <div className="logo text-indigo-600 p-5 font-bold text-2xl">
+          <div className="logo text-primary p-5 font-bold text-2xl">
             <h1>
-              <span className="bg-indigo-500 p-2 rounded-xl text-white">
+              <span className="bg-primary p-2 rounded-xl text-white">
                 Jaheet
               </span>
               .in
@@ -136,7 +136,7 @@ const NavbarMain = () => {
           <div className="login text-white">
             <button
               onClick={() => navigate("/login")}
-              className={"bg-indigo-600 px-3 py-2  mr-3 rounded-2xl"}
+              className={"bg-primary px-3 py-2  mr-3 rounded-2xl"}
             >
               Login
             </button>
