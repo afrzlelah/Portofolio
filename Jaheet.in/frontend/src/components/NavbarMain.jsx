@@ -11,6 +11,10 @@ const NavbarMain = () => {
       setBtn(false);
     };
     const eventScroll = window.addEventListener("scroll", handleBtn);
+    const eventScroll2 = window.addEventListener(
+      "scroll",
+      setRotate("rotate-0")
+    );
 
     return () => (eventScroll, eventScroll2);
   }, []);

@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import CardService from "./Cards";
+import CardService from "../Atom/content/Cards";
 
 const Content = () => {
   const navigate = useNavigate();

@@ -1,12 +1,17 @@
 import Navbar from "../components/NavbarMain";
-import ContentsMain from "../components/ContentsMain";
+import Content from "../components/content";
 import Footer from "../components/FooterMain";
 
 const Main = () => {
   return (
     <>
       <Navbar />
-      <ContentsMain />
+      <Content />
+      <Content.Content2 />
+      <Content.Why />
+      <Content.Layanan />
+      <Content.Portofolio />
+      <Content.Maps />
       <Footer />
     </>
   );
