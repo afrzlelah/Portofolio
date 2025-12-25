@@ -111,7 +111,7 @@ const NavbarMain = () => {
             </ul>
             {/* Tombol Menu mass */}
             <div
-              className={`btnMenu ${rotate} md:hidden ml-30`}
+              className={`btnMenu ${rotate} md:hidden ml-30 cursor-pointer`}
               onClick={(e) => {
                 setBtn(!btn);
                 if (btn == true) {
@@ -140,7 +140,9 @@ const NavbarMain = () => {
           <div className="login text-white">
             <button
               onClick={() => navigate("/login")}
-              className={"bg-primary px-3 py-2  mr-3 rounded-2xl"}
+              className={
+                "bg-primary px-3 py-2  mr-3 rounded-2xl cursor-pointer"
+              }
             >
               Login
             </button>

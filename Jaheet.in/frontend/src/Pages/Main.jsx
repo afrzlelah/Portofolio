@@ -1,5 +1,5 @@
 import Navbar from "../components/NavbarMain";
-import Content from "../components/content";
+import Content from "../Molecules/content";
 import Footer from "../components/FooterMain";
 
 const Main = () => {
